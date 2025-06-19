@@ -26,6 +26,7 @@
       <img src="Home/slide2.jpg" alt="Slide 2">
       <img src="Home/slide3.jpg" alt="Slide 3">
       <img src="Home/slide4.jpg" alt="Slide 4">
+       <img src="Home/slide5.jpg" alt="Slide 4">
     </div>
   </div>
 </div>
@@ -38,8 +39,8 @@
   }
   .slides {
     display: flex;
-    width: 400%;            /* 4 slides × 100% each */
-    animation: slide 15s infinite;
+    width: 500%;            /* 4 slides × 100% each */
+    animation: slide 25s infinite;
     animation-play-state: running;
     cursor: pointer;        /* indicate clickable */
   }
@@ -47,15 +48,18 @@
     width: 100%;
     flex-shrink: 0;
   }
-  @keyframes slide {
+ @keyframes slide {
+    /* hold 15%, move 5% between each of 5 slides, final 5% returns */
     0%   { transform: translateX(0%); }
-    20%  { transform: translateX(0%); }
-    25%  { transform: translateX(-100%); }
-    45%  { transform: translateX(-100%); }
-    50%  { transform: translateX(-200%); }
-    70%  { transform: translateX(-200%); }
+    15%  { transform: translateX(0%); }
+    20%  { transform: translateX(-100%); }
+    35%  { transform: translateX(-100%); }
+    40%  { transform: translateX(-200%); }
+    55%  { transform: translateX(-200%); }
+    60%  { transform: translateX(-300%); }
     75%  { transform: translateX(-300%); }
-    95%  { transform: translateX(-300%); }
+    80%  { transform: translateX(-400%); }
+    95%  { transform: translateX(-400%); }
     100% { transform: translateX(0%); }
   }
 </style>
